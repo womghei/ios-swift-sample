@@ -52,7 +52,6 @@ public extension Tealium {
             let appData = module.appData else {
             return nil
         }
-
         return appData
     }
 

@@ -364,6 +364,7 @@ public struct TealiumBatchTrackRequest: TealiumRequest, Codable {
                       TealiumKey.fullModel,
                       TealiumKey.visitorId
     ]
+    
     public var trackRequests: [TealiumTrackRequest]
 
     public var moduleResponses = [TealiumModuleResponse]()

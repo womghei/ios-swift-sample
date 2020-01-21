@@ -133,7 +133,6 @@ public class TealiumAppData: TealiumAppDataProtocol, TealiumAppDataCollection {
             setNewAppData()
             return
         }
-
         appData.persistentData = data
         if let existingVisitorId = self.existingVisitorId,
             let persistentData = appData.persistentData {

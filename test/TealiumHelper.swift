@@ -23,9 +23,8 @@ class TealiumHelper {
     let config = TealiumConfig(account: TealiumConfiguration.account,
                                profile: TealiumConfiguration.profile,
                                environment: TealiumConfiguration.environment)
-
+    
     var tealium: Tealium?
-
     
     // MARK: Tealium Initilization
     public init() {
@@ -40,7 +39,6 @@ class TealiumHelper {
 //        config.setModulesList(list)
         config.setMemoryReportingEnabled(true)
         config.setDiskStorageEnabled(isEnabled: true)
-
         // To enable batching:
         // config.setBatchSize(5)
         // config.setIsEventBatchingEnabled(true)
@@ -49,8 +47,6 @@ class TealiumHelper {
             // Optional post init processing
             
         }
-        
-
     }
 
     public func start() {
@@ -74,8 +70,14 @@ class TealiumHelper {
     class func leaveTrace() {
         TealiumHelper.shared.tealium?.leaveTrace()
     }
-
+    
 }
+
+//extension TealiumHelper: TealiumAppData {
+//    func willDropTrackingCall(_ request: TealiumTrackRequest) {
+//        // ...
+//    }
+//}
 
 
 
